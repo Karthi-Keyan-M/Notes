@@ -1,0 +1,109 @@
+HTML:
+1.html
+2.head
+3.title
+4.body
+5.(h1 to h6)-heading 
+6.p-paragraph
+7.<img src alt> - image tag
+8.<a href>text</a> -create hyperlink
+<a href="/images/myw3schoolsimage.jpg" download>-download a file when clicking.
+<a href target>
+_blank	Opens the linked document in a new window or tab
+_self	Opens the linked document in the same frame as it was clicked (this is default).
+9.ol-ordered list
+10.ul-unordered list
+11.li -list item
+12.<iframe src>-is used to embed another document withion our HTML document.
+13.hr - Horizontal line.
+14.br-line break tag
+15.<link src='icon'>- it displays icon in top corner of the browser page.
+16.<center>-it displays our content into center.
+Neocities - host websites.
+17.<table border>-is used to create table
+18.tr-table row
+19.th-table head
+20.td-table data
+21.<!DOCTYPE>-It is an "information" to the browser about what document type to expect.
+22.The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.-The <abbr> tag defines an abbreviation or an acronym. title attribute to show the description for the abbreviation/acronym 
+23.<img src="world-map.jpg" usemap="#worldmap" alt="World Map">
+<map name="worldmap">
+  https://usa.gov
+  <area shape="circle" coords="400,300,50" href="https://india.gov.in" alt=">
+<map> tag defines an image map, which is a list of clickable areas on an image. It doesn't display anything by itself.
+The <area> tag defines each clickable region within the image map. You can specify the shape, coordinates, and link for each area.
+24.The <article> tag specifies independent, self-contained content.
+25.The <aside> HTML element represents a portion of a document whose content is only indirectly related to the document's main content.This tag doesn't do anything we need to use css to move aside from main content.
+26.<audio controls src=''> or <audio controls> <source>
+Attribute:
+1.autoplay-the audio will automatically begin playback
+2.controls-If this attribute is present, the browser will offer controls to allow the user to control audio playback, including volume, seeking, and pause/resume playback.
+3.controllist-attribute, when specified, helps the browser select what controls to show for the audio element whenever the browser shows its own set of controls 
+4.loop-A Boolean attribute: if specified, the audio player will automatically seek back to the start upon reaching the end of the audio.
+5.muted-A Boolean attribute that indicates whether the audio will be initially silenced. Its default value is false.
+27.<b>-bold the contents.
+28.<bdi>-The <bdi> HTML element tells the browser's bidirectional algorithm to treat the text it contains in isolation from its surrounding text.
+29.<blockquote>-The <blockquote> HTML element indicates that the enclosed text is an extended quotation.
+30.<button>-is used to create a button.
+31.<cite>-It typically renders the text in italic by default (depending on the browser's styling).
+It helps semantically identify that the content is a citation of a creative work.
+32.<code>-The <code> HTML element displays its contents styled in a fashion intended to indicate that the text is a short fragment of computer code. 
+33.<caption>-The <caption> HTML element specifies the caption (or title) of a table.
+34.<datalist>-is used in form for select multiple option for example college names.
+35.<dl>-is a discriptive list.
+36.<dt>-dt comes under dl it shows discription or definition list.
+37.<dd>-The <dd> HTML element provides the description, definition, or value for the preceding term (<dt>) in a description list (<dl>).
+38.<details>-The <details> HTML element creates a disclosure widget in which information is visible only when the widget is toggled into an open state. A summary or label must be provided using the <summary> element.
+39.<del>-is used to strike out the contents.
+40.<div>-The <div> HTML element is the generic container for flow content.
+41.<em>-The <em> HTML element marks text that has stress emphasis.
+42.<embed
+  type="video/mp4"
+  src="/shared-assets/videos/flower.mp4"
+  width="250"
+  height="200" />-The <embed> HTML element embeds external content at the specified point in the document.It creates a box for form elements and then it has nested legend tag is used around 
+43.<fieldset>-<fieldset>
+    <legend>Choose your favorite monster</legend>
+    <input type="radio" id="kraken" name="monster" value="K" />
+    <label for="kraken">Kraken</label><br />
+44.<figure>-Usually a <figure> is an image, illustration, diagram, code snippet, etc., that is referenced in the main flow of a document, but that can be moved to another part of the document or to an appendix without affecting the main flow.
+45.<figcaption>-is the caption of the figure content.
+46.<footer>- A <footer> typically contains information about the author of the section, copyright data or links to related documents.It doesn't do anything.
+47.<form>-Creating a form.
+48.<header>
+49.<hr>-horizontal line.
+50.<i>-Italic texts.
+51.<iframe>-The <iframe> HTML element represents a nested browsing context, embedding another HTML page into the current one.
+52.<input type='' value='' name='' maxlength= placeholder='shown in display' required autofocus>
+type:
+text	Single-line text input.
+password	Obscured text input for passwords.
+email	Validates email format.
+number	Numeric input with optional min/max.
+date	Date picker.
+time	Time picker.
+checkbox	Checkbox input.
+radio	Radio button (used in groups).
+submit	Submit button for forms.
+reset	Resets form fields to default values.
+file	File upload input.
+hidden	Hidden input (not visible to users).
+range	Slider input for numeric range.
+color	Color picker.
+tel	Telephone number input.
+url	Validates URL format.
+search	Search field with optional styling.
+button	Generic button (no form submission).
+53.<label>-When a user clicks or touches/taps a label, the browser passes the focus to its associated input (the resulting event is also raised for the input). That increased hit area for focusing the input provides an advantage to anyone trying to activate it — including those using a touch-screen device.
+54.<legend>-The <legend> HTML element represents a caption for the content of its parent <fieldset>.
+55.<link href="/shared-assets/misc/link-element-example.css" rel="stylesheet" />-The <link> HTML element specifies relationships between the current document and an external resource. This element is most commonly used to link to stylesheets.
+56.<main>-The <main> HTML element represents the dominant content of the <body> of a document. 
+57.<mark>-Highlight the text.
+58.<optgroup>-is used with select and option is used as label for options.
+59.<option>-is used with select to preapre for multiple oprions.
+60.<pre>-Whitespace inside this element is displayed as written, with one exception. If one or more leading newline characters are included immediately following the opening <pre> tag, the first newline character is stripped.
+<pre> elements' text content is parsed as HTML, so if you want to ensure that your text content stays as plain text, some syntax characters, such as <, may need to be escaped using their respective character references. See escaping ambiguous characters for more information.
+61.<progress>-The <progress> HTML element displays an indicator showing the completion progress of a task, typically displayed as a progress bar.
+62.<q>-The <q> HTML element indicates that the enclosed text is a short inline quotation.
+63.<s>-The <s> HTML element renders text with a strikethrough, or a line through it.
+64.<script>-<script src="javascript.js"></script>-The <script> HTML element is used to embed executable code or data; this is typically used to embed or refer to JavaScript code. 

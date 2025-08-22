@@ -1,0 +1,65 @@
+SQL-Doubts
+
+Tcl-it does not affect DDL
+
+orderby-null:
+In desc the null appears in last  if we want to move first we use nulls first.
+In asc the null appears in first if we want to move last we use nulls last.
+
+full join 5 *10:
+All rows from Table A
+All rows from Table B
+Matches where possible
+NULLs where there is no match
+
+self join:
+Find products in a same category
+SELECT 
+  p1.name AS product,
+  p2.name AS recommended_product
+FROM 
+  products p1
+JOIN 
+  products p2
+ON 
+  p1.category_id = p2.category_id
+AND 
+  p1.product_id != p2.product_id;
+
+union differnt column name with same data type:
+UNION to combine results from two or more queries, even if the column names are different, as long as the data types are compatible and the number of columns match.
+
+adding check to existing table having data that is violating check:
+In most databases (like PostgreSQL, SQL Server, Oracle): The ALTER TABLE command will fail if any existing row violates the new CHECK constraint.
+In MySQL (especially older versions): The CHECK constraint might be silently ignored or not enforced depending on the storage engine.
+If we want to enforce the constraint
+1.Clean the data first using delete function where age<20
+2.ALTER TABLE people VALIDATE CONSTRAINT age_check; validate the constraint.
+
+auto_increament:
+It is attribute or property.It is not a constraint.
+
+null and space:
+🔹 NULL
+Represents missing, unknown, or undefined data.
+It means no value has been assigned.
+You cannot compare NULL using = or <>; instead, you use IS NULL or IS NOT NULL.
+🔹 Space (' ')
+A space is a valid string value consisting of a single whitespace character.
+It is not empty and definitely not NULL.
+You can compare it using =, like column_name = ' '.
+
+view-delete:
+It doesn't store data but it displays data.
+we can delete data from view when it is active.
+
+duplecate records without any key:
+A table can have duplicate records if it does not have any key like a primary key or unique constraint defined.
+
+Second Normal Form (2NF):
+It is in First Normal Form (1NF) (i.e., no repeating groups or arrays).
+All non-key attributes are fully functionally dependent on the entire primary key.
+
+Third Normal Form (3NF)
+It is in 2NF.
+There are no transitive dependencies (i.e., non-key attributes do not depend on other non-key attributes).

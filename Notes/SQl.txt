@@ -1,0 +1,27 @@
+SQl:
+DDL:Define the structure of Database.Create,Alter,Drop,Truncate,Rename.
+DML:Manipulate the data.Select,update,insert,delete.
+Data Types:int,float,decimal,date,datetime,char,varchar,Enum,boolean,time,year,null,not.
+Primary Key:Uniquely identifier in a table.It should be not null and unique.
+Foriegn Key:Key that matches primary key in Parent parent table.It can also be null.
+Alter:To add or remove columns in a table.
+Drop:Delete the entire table 
+Truncate:Delete the data only and table structures remains.
+Primary key using Alter command
+To change the column using chang and rename keyword.
+Where clause is use to filter the records.
+Inner join is used to combine common elements in more than one table.
+Left join is used to combine all the data from left table and matching record from right table.
+Right join is used to combine all the data from right table and matching record from left table.
+Normalization is the process of organizing data efficiently.
+Benefits of Normalization:Reduce space,Reduce DML anomolies,Improve Query performance.
+1NF:Row should be unique,Column should be atomic(single) values.
+2NF:It shoukd be 1NF and Every Non PK value must be dependent on whole Pk.
+3NF:It should in 2NF and Every Non PK value must be dependent on whole of Pk.
+Aggregate Function:Count,Sum,Min,Max,Avg.We can perform Calculations on data within a column and returns result in single row.
+SubQuery:A query which have another query within and the inner query is first executed and the results from subquery is used by outer query.Can be used in select,update,insert and delete.
+A correlated subquery is a subquery that references columns from the outer query. This means that the subquery is executed repeatedly for each row processed by the outer query. The inner query depends on the outer query for its values.
+A non-correlated subquery is independent of the outer query. It can be executed separately and its result is used by the outer query. These subqueries are executed only once and their result is used to filter or manipulate the data in the outer query.
+String functions:Concat,Substring,Upper,Lower.
+Concat : combine multiple strings together.
+substring: Syntax-Substring(String,start,stop).

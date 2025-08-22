@@ -1,0 +1,22 @@
+Applications:
+1.Streaming Data
+2.Machine Learning
+3.Batch Data
+4.ETL PipeLines
+Why Spark?
+1.It is High speed
+2.It works in distributed Fashion.Multiple computations works in parallel.
+Spark Architecture:
+1.Spark Context:it is for managing all the code or data
+2.Cluster Manager:Allocates tasks to worksers.
+RDD(Resilient Distributed Dataset):
+1.It is immutable distributed colllection of objects.
+2.It distribute data to differnt nodes to achieve parallelization.
+Creating RDD:
+from pyspark import SparkContext,SparkConf
+conf=SparkConf().setAppName("Read File")
+sc=SparkContext.getOrCreate(conf=conf)
+Access Table:
+text=sc.textFile("Table Path")
+RDD is act like an Array 
+text.collect()- Gives the file content in array form.

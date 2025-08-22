@@ -1,0 +1,259 @@
+UNIX:
+The Unix OS is a set of programs that plays a role as a connection b/w computer and user.
+The user communicates with kernel through a program known as shell.
+The kernel is the core part of an operating system. It acts as a bridge between software applications and the hardware of a computer.
+Shell is a command line Interpreter.
+All data in unix is organized into files.All files is organized into directories.
+
+Reasons to Use Unix Commands
+1.Direct Control:
+Gives precise control over files, processes, and system settings.
+2.Speed and Efficiency:
+Faster than graphical interfaces for many tasks.
+3.Automation:
+Enables scripting and task automation using shell scripts.
+4.Remote Management
+Ideal for managing servers via SSH.
+4.Text Processing Power
+Tools like grep, awk, and sed are excellent for handling logs and data.
+5.System Monitoring
+Commands like top, ps, and df help monitor performance and usage.
+6.Flexibility
+Commands can be combined using pipes (|) and redirection (>, <) for complex workflows.
+7.Cross-Platform Compatibility
+Works across many Unix-like systems (Linux, macOS, etc.).
+
+UNIX Architecture:
+1. Hardware Layer
+This is the physical layer: CPU, memory, disk drives, etc.
+The kernel interacts directly with the hardware.
+2. Kernel
+The core of the Unix operating system.
+Manages system resources like memory, processes, and devices.
+Provides system calls for user programs to interact with hardware.
+3. Shell
+A command-line interpreter that acts as a user interface.
+Translates user commands into actions by calling kernel functions.
+Examples: bash, sh, csh, ksh.
+4. Utilities and Applications
+These are user-level programs and tools that perform specific tasks.
+Examples: ls, grep, cp, vi, awk, sed.
+5. File System
+Everything in Unix is treated as a file.
+Hierarchical structure starting from the root /.
+Provides access control and organization of data.
+
+Interaction Flow:
+User enters a command in the shell.
+Shell interprets the command and sends a request to the kernel.
+Kernel accesses hardware or system resources to execute the command.
+Output is returned to the shell and displayed to the user.
+
+commands:
+1.whoami - returns our user name.
+
+2.man <command> - It gives the manual of the command.
+
+3.clear or ctrl+L - clear all the previous commands that runs on the current terminal.
+
+4.pwd-print the full name of the current working directory.
+
+5.ls-is used to list out all files which are in our current directories.
+ls <directory_name> - list out all files inside this directory
+ls -l - Shows detailed information about each file.
+ls -a -Shows all files including hidden ones starting with .
+ls -la -Shows all files including hidden ones starting with . in long format.
+ls -lh -Shows file sizes in a human-readable format (e.g., KB, MB).
+ls -t  -Sorts by modification time
+ls -S  -Sorts by file size
+ls -r  -Reverses the order of the sort.
+
+6.cd - change the current working directory.
+cd <pathname>/ - Move to the directory or path.
+cd .. -Move to the previous path or folder.
+cd ~ - this command move to our username folder path /home/karthikeyan.
+/ is the root directory.
+~ is the home directory.
+
+7.mkdir <filename1> <filename2>- this command is used to create a folder/directories.
+mkdir -p <filename1>/<filename2>-this command is used to create nested folder.
+
+8.touch [filename .txt .xls .pdf .png etc]- create an empty file or update the timestamp of an existing file.
+
+9.rmdir - is used to delete the directories.This directories must be empty while deleting.
+
+10.rm <filename> - remove files or directories.
+rm -r - remove directories and their contents recursively.
+rm -i  - prompt before every removal.
+rm -v -explain what is being done.
+
+11.open <filename> - open a file
+
+12.vi <filename> -open the file.
+
+13.mv - is used to move or rename files and directories.
+rename a file:
+mv <oldname> <newname>
+Move a file 
+mv <filename> <path>
+
+14.cp <filename> <copy-filename> - is used to copy the file content
+cp -r <foldername> <copy-foldername> - copy directories recursively
+
+15.head - output the first part of files .Print  the  first  10  lines of each FILE to standard output.
+
+16.head -n <number of lines> <filename> - print the number of lines from the text file
+
+17.tail - output the last part of files .Print  the  last  10  lines of each FILE to standard output.
+tail -n <number of lines> <filename> - print the number of lines from the text file.
+tail -f <filename> - which continuously displays new lines added to file.txt.
+
+18.date - Mon Jul 28 09:30:14 UTC 2025.
+> symbol -data > file is used to redirect the output.
+
+19.cat - concatenate files and print on the standard output.
+cat -Display the contents of a file,Combine multiple files,Create new files
+cat > filename -create a new file and write the content.Ctrl+D to save and exit.
+cat file1 file2 > newfile - combine the contents and store in newfile.
+cat -n filename -number all output lines .
+
+20.less - is used to view the contents of a file one screen at a time. It's especially useful for reading large files or command outputs without opening them in an editor./ is used to search a string.
+
+21.echo - is used to display a line of text or a variable value to the terminal.
+echo 'text' >filename - is used to write contents inside the file.
+echo 'text' >> filename - is used to add the string at the end of the file.
+echo * - it print every path in our system
+echo *.?? - ? represents any of the character matches.
+echo {1..10} - it will print 1 to 10.
+
+22.wc - print number of newline, number of words, and byte counts for each file.
+-l - number of lines
+-m - number of characters.
+-w - number of words.
+
+23.piping(|) - is allows to pass the output of one command as input to another. This is done using the pipe symbol |.
+ 
+24.sort - sort lines of text files
+-f - ignore case.
+It is case sensitive lower letter comes first without using -f.
+-n - numeric sort.
+-r - is used to reverse the order.
+
+25.uniq - report or omit repeated lines.It romoves Adjacent duplicate values.
+sort new.txt | uniq - it is used to remove every duplicate values.
+sort new.txt |uniq -u - it displays non duplicate values.
+sort new.txt |uniq -c - count the number of occurrences. 
+
+26.diff - compare files line by line.
+
+27.find - search for files in a directory hierarchy 
+find . -search every single file.
+find . -name 'n*' -find all the files starting with n.
+find -type d - finds all the directories.
+find -type f - finds all the files.
+find -name 'E*' -or -name 'F*' - find the file name starts with either E or F.
+find -size +100k - find files larger than 100K sie.
+
+28.grep - print lines matching a pattern .
+grep -n 'text' filename - print the line number with matching text.
+grep -r 'text' . - it finds the matching pattern in all files.
+-i - ignore case.
+
+29.du - displays file space usage.
+du -h - it gives output the files size as human readable format.
+
+30.df - report file system disk space usage.
+
+31.history- Displays a list of previously executed commands.
+!n: Repeats the command with history number n.
+!!: Repeats the last command.
+
+32.ps - report a snapshot of the current processes.
+
+33.top - used to list the processess running in real time.  
+
+34.kill-The  command  kill  sends  the  specified  signal  to the specified process or process group.  If no signal is specified, the TERM(Terminate) signal  is  sent.The TERM(Terminate) signal will kill processes which do not catch this signal.
+kill -l - returns the  print signal names and their  corre‐sponding numbers.
+TERM -Terminate the process
+STOP -Stop the process not Terminate.
+CONT - continue it means resume the stopped process.
+kill -9 processid -SIGKILL
+kill -15 processid -SIGTERM
+kill processid
+
+35.killall-killall  sends  a signal to all processes running any of the specified commands.
+
+36.jobs - display the status of jobs.Shows background and suspended jobs with their job IDs and status.
+
+37.fg - used to manage job control.Brings a background or suspended job to the foreground.
+
+38.bg(&) - used to manage job control.Resumes a suspended job in the background.
+
+39.gzip-is used to compress the file
+gzip filname - is used to compress the file and replace the file with compressed version and the extension is .gz is added.
+gzip -k filename (or) gzip -c filename>filename.gz - is used to keep our orignial file without deletion aswell as it has compressed version.
+gzip -d filename.gz - unzip the file. 
+
+40.gunzip- unzip the file.
+
+41.who - show who is logged on.
+
+42.su username -It's primarily used to switch to another user account, most commonly to the superuser (root).
+
+43.tar - is used to create an archive, grouping multiple files in a single file.
+tar -cf name.tar file1 file2 - c stands for create f is used to write file the archive. 
+tar -xf name.tar - unarchive the folder.x stands for extract.
+tar -xf name.tar -C directory - is used to extract into specific directory.
+tar -tf name.tar - is used to view the file inside the archive.
+
+44. nano-is used to edit the file.If the file doesn't exist, nano will create it.
+Ctrl + X	Exit nano
+Ctrl + W	Search within the file
+Ctrl + K	Cut the current line
+Ctrl + U	Paste the cut line
+Ctrl + G	Show help
+Ctrl + O        Change the file name
+
+45.alias shortname='actual command'-is a way to create a shortcut for a command or a group of commands. It helps simplify long or frequently used commands.It is not permanent.After the session close its not working.
+To make aliases persist across sessions, add them to your shell configuration file:
+echo "alias ll='ls -l'" >> ~/.bashrc
+
+46.ln original.txt link.txt - is used to create links between files.
+1.Hard Link
+A hard link is essentially another name for an existing file. Both the original and the link point to the same data on disk.
+Both original.txt and link.txt will behave like the same file.
+Deleting one does not delete the data unless all links are removed.
+2.Symbolic Link (Soft Link)
+A symbolic link is like a shortcut or pointer to another file or directory.
+ln -s original.txt shortcut.txt
+shortcut.txt points to original.txt.
+If the original file is deleted, the symbolic link becomes broken.
+
+47.sudo-"superuser do". It allows a permitted user to execute a command as the superuser (root) or another user, as specified by the security policy.
+
+48.cal-returns current month in a calender.
+
+49.passwd-is used to change the password.
+
+50.chown <owner><file>- is used to change the owner of the file.
+sudo chown -R <owner> <file> - is used to change the owner of the file recursively.
+
+51.chmod mode file - To change the permissions of a file or  directory.
+who - we are changing permissions for 
+what - what are we making?Adding?removing?
+which - permissions are we setting.
+who
+u - user
+g- group
+o - others
+a - all the above. 
+what
+- (removes the permission)
++(grants the permission)
+=(set a permission and removes others)
+which
+r - read
+w - write
+x - execute
+     
+
